@@ -2,27 +2,23 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
 
 ```
-e.preventDefault();
+e.preventDefault(); // Evita que la página se recargue
 
-// Datos ingresados
+// Obtenemos los datos ingresados
 const usuario = document.getElementById('usuario').value;
-const password = document.getElementById('contraseña').value;
+const password = document.getElementById('password').value;
 const mensaje = document.getElementById('mensaje');
 
-// Validación
+// Validación simple
 if(usuario === "admin" && password === "1234") {
 
-    mensaje.style.color = "green";
-    mensaje.textContent = "Acceso correcto";
-
-    setTimeout(() => {
-        window.location.href = "/exito";
-    }, 1000);
+    // Redirecciona a la página de éxito
+    window.location.href = "/exito";
 
 } else {
 
     mensaje.style.color = "red";
-    mensaje.textContent = "Datos incorrectos";
+    mensaje.textContent = "Usuario o contraseña incorrectos.";
 
 }
 ```
