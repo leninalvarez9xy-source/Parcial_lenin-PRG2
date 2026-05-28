@@ -2,17 +2,20 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
 
 ```
-e.preventDefault(); // Evita que la página se recargue
+e.preventDefault();
 
-// Obtenemos los datos ingresados
+// Obtenemos los datos
 const usuario = document.getElementById('usuario').value;
 const password = document.getElementById('password').value;
 const mensaje = document.getElementById('mensaje');
 
-// Validación simple
+// Validación
 if(usuario === "admin" && password === "1234") {
 
-    // Redirecciona a la página de éxito
+    // Ventana emergente
+    alert("Gracias por entrar");
+
+    // Redirecciona a la página éxito
     window.location.href = "/exito";
 
 } else {
